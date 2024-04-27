@@ -17,3 +17,5 @@ async def read_all_books():
 #create an api to post new books
 #create an api to remove books
 #create an api to update new book
+
+#read books from database
