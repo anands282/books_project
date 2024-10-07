@@ -14,6 +14,10 @@ books = [
 async def read_all_books():
     return books
 
+@app.get("/books/{dynamic_param}")
+async def read_all_books(dynamic_param):
+    return {'dynamic_param': dynamic_param}
+
 #create an api to post new books
 #create an api to remove books
 #create an api to update new book
