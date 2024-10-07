@@ -14,6 +14,12 @@ books = [
 async def read_all_books():
     return books
 
+@app.get("/books/{book_title}")
+async def read_all_books(book_title):
+    for book in books:
+        if book.get('title').casefold() == book_title.casefold():
+            return book
+
 @app.get("/books/{dynamic_param}")
 async def read_all_books(dynamic_param):
     return {'dynamic_param': dynamic_param}
